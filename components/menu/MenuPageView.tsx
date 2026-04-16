@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { ImageIcon } from 'lucide-react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import {
   MENU,
@@ -195,6 +196,19 @@ export function MenuPageView() {
                     >
                       {t(tab.labelKey)}
                     </h2>
+                    <p
+                      id={`menu-dish-hint-${tab.id}`}
+                      className="mt-4 hidden max-w-xl items-start gap-2.5 text-[12px] leading-snug text-mist/80 [@media(hover:hover)]:flex"
+                    >
+                      <ImageIcon
+                        className="mt-0.5 h-4 w-4 shrink-0 text-gold/50"
+                        strokeWidth={1.5}
+                        aria-hidden
+                      />
+                      <span className="font-normal tracking-wide">
+                        {t('menuDishPreviewHint')}
+                      </span>
+                    </p>
                     <ul className="mt-8 space-y-0 md:mt-10">
                       {MENU[tab.id].map((item) => (
                         <li
@@ -203,11 +217,21 @@ export function MenuPageView() {
                         >
                           <div>
                             <span
-                              className="inline cursor-default font-medium text-cream underline-offset-4 transition-colors [@media(hover:hover)]:hover:text-white [@media(hover:hover)]:hover:underline [@media(hover:hover)]:hover:decoration-gold/60"
+                              role="button"
+                              tabIndex={0}
+                              aria-describedby={`menu-dish-hint-${tab.id}`}
+                              className={cn(
+                                'inline cursor-pointer rounded-sm border-b border-dashed border-gold/45 pb-px font-medium text-cream',
+                                'transition-[color,border-color,box-shadow] duration-200',
+                                '[@media(hover:hover)]:hover:border-solid [@media(hover:hover)]:hover:border-gold [@media(hover:hover)]:hover:text-white',
+                                'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/45 focus-visible:ring-offset-2 focus-visible:ring-offset-navy',
+                              )}
                               onMouseEnter={(e) =>
                                 showDishPreview(item, e.currentTarget)
                               }
                               onMouseLeave={hideDishPreviewSoon}
+                              onFocus={(e) => showDishPreview(item, e.currentTarget)}
+                              onBlur={hideDishPreviewSoon}
                             >
                               {item.name}
                             </span>

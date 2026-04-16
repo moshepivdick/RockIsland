@@ -46,6 +46,8 @@ const coreItMessages = {
   menuCatPizza: 'Pizza',
   menuCatCocktail: 'Cocktail',
   menuSeeFull: 'Vedi il menu completo',
+  menuDishPreviewHint:
+    'Passa il cursore sul nome di un piatto per vedere l’anteprima fotografica.',
   eventsKicker: 'Prossimi eventi',
   eventsTitle: 'La stagione sul pontile',
   eventsCalendar: 'Calendario completo',
@@ -137,6 +139,7 @@ export const bundles = {
     menuCatPizza: 'Pizza',
     menuCatCocktail: 'Cocktails',
     menuSeeFull: 'See full menu',
+    menuDishPreviewHint: 'Hover a dish name to see a photo preview.',
     eventsKicker: 'Upcoming events',
     eventsTitle: 'The season on the pier',
     eventsCalendar: 'Full calendar',
@@ -218,6 +221,8 @@ export const bundles = {
     menuCatPizza: 'Pizza',
     menuCatCocktail: 'Cocktails',
     menuSeeFull: 'Vollständiges Menü ansehen',
+    menuDishPreviewHint:
+      'Fahren Sie mit der Maus über einen Gerichtnamen, um eine Fotovorschau zu sehen.',
     eventsKicker: 'Kommende Events',
     eventsTitle: 'Die Saison auf der Mole',
     eventsCalendar: 'Vollständiger Kalender',
@@ -299,6 +304,8 @@ export const bundles = {
     menuCatPizza: 'Pizza',
     menuCatCocktail: 'Cocktails',
     menuSeeFull: 'Voir le menu complet',
+    menuDishPreviewHint:
+      'Survolez le nom d’un plat pour afficher un aperçu photo.',
     eventsKicker: 'Prochains événements',
     eventsTitle: 'La saison sur la jetée',
     eventsCalendar: 'Calendrier complet',
@@ -380,6 +387,8 @@ export const bundles = {
     menuCatPizza: 'Пицца',
     menuCatCocktail: 'Коктейли',
     menuSeeFull: 'Полное меню',
+    menuDishPreviewHint:
+      'Наведите курсор на название блюда, чтобы увидеть фото.',
     eventsKicker: 'Ближайшие события',
     eventsTitle: 'Сезон на пирсе',
     eventsCalendar: 'Полный календарь',
