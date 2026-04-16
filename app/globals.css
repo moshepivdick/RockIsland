@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --deep-navy: #0d1b2a;
+    --sunset-gold: #e8a838;
+    --warm-cream: #f5edd8;
+    --sea-mist: #8fb8c9;
+    --background: 210 40% 8%;
+    --foreground: 40 40% 95%;
+    --muted: 210 25% 18%;
+    --muted-foreground: 200 15% 65%;
+    --accent: 38 75% 56%;
+    --accent-foreground: 210 40% 10%;
+    --border: 200 20% 24%;
+    --input: 200 20% 24%;
+    --ring: 38 75% 56%;
+    --radius: 2px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-navy text-cream antialiased;
+    font-family: var(--font-inter), system-ui, sans-serif;
+  }
+
+  ::selection {
+    @apply bg-gold/30 text-white;
+  }
+}
+
+@layer utilities {
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+}
